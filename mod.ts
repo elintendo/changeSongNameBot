@@ -1,6 +1,5 @@
-import { serve } from 'https://deno.land/std@0.177.1/http/server.ts'
-import { webhookCallback } from 'https://deno.land/x/grammy@v1.16.1/mod.ts'
-// You might modify this to the correct way to import your `Bot` object.
+import { serve } from './deps.deno.ts'
+import { webhookCallback } from './deps.deno.ts'
 import { bot } from './bot.ts'
 
 const handleUpdate = webhookCallback(bot, 'std/http')
